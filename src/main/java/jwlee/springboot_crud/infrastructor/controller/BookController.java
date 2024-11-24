@@ -1,4 +1,4 @@
-package jwlee.springboot_crud.infrasturctor.controller;
+package jwlee.springboot_crud.infrastructor.controller;
 
 import jwlee.springboot_crud.domain.model.Book;
 import jwlee.springboot_crud.domain.service.BookService;
