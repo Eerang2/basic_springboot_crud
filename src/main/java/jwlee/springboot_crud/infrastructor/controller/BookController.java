@@ -44,14 +44,14 @@ public class BookController {
     }
 
     @GetMapping("/book/edit/{id}")
-    public String edit(@PathVariable("id") Long id, Model model) {
+    public String edit(@PathVariable Long id, Model model) {
         Book book = bookService.findBookById(id);
         model.addAttribute("book", book);
         return "book/edit";
     }
 
     @DeleteMapping("/book/delete/{id}")
-    public ResponseEntity<String> delete(@PathVariable("id") Long id) {
+    public ResponseEntity<String> delete(@PathVariable Long id) {
         bookService.bookDelete(id);
         return ResponseEntity.ok("success");
     }
