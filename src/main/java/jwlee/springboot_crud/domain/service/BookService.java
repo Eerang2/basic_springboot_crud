@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -40,6 +40,21 @@ public class BookService {
             books.add(new Book(bookEntity.getId(), bookEntity.getTitle(), bookEntity.getAuthor(), bookEntity.getDescription()));
         }
         return books;
+
+/**
+ *         < stream 사용 >
+ *
+ *         List<Book> books = bookRepository.findAll().stream()
+ *                 .map(bookEntity -> new Book(
+ *                         bookEntity.getId(),
+ *                         bookEntity.getTitle(),
+ *                         bookEntity.getAuthor(),
+ *                         bookEntity.getDescription()
+ *                 ))
+ *                 .collect(Collectors.toList());
+ *
+ *         return books;
+ */
     }
 
     public Book findBookById(final Long id) {
@@ -59,7 +74,8 @@ public class BookService {
         BookEntity bookEntity = new BookEntity(book.getId(), book.getTitle(), book.getAuthor(), book.getDescription());
 
         // 기존에 DB 에 저장되어있는 정보 추출
-        BookEntity entity = bookRepository.findById(bookEntity.getId()).orElseThrow(RuntimeException::new);
+        BookEntity entity = bookRepository.findById(bookEntity.getId())
+                                          .orElseThrow(RuntimeException::new);
 
 
         // 추출한 정보 수정할 값으로 set
