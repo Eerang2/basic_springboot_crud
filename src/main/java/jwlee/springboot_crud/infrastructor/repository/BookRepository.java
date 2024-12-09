@@ -1,7 +1,7 @@
-package jwlee.springboot_crud.domain.repository;
+package jwlee.springboot_crud.infrastructor.repository;
 
 
-import jwlee.springboot_crud.domain.repository.entity.BookEntity;
+import jwlee.springboot_crud.domain.entity.BookEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookRepository extends JpaRepository<BookEntity, Long> {

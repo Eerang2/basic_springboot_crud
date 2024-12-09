@@ -1,4 +1,4 @@
-package jwlee.springboot_crud.domain.repository.entity;
+package jwlee.springboot_crud.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.Builder;

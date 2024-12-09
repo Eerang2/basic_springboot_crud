@@ -1,4 +1,4 @@
-package jwlee.springboot_crud.infrastructor.dto;
+package jwlee.springboot_crud.application.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jwlee.springboot_crud.domain.model.Book;

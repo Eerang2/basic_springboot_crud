@@ -1,14 +1,13 @@
-package jwlee.springboot_crud.domain.service;
+package jwlee.springboot_crud.application.service;
 
 import jwlee.springboot_crud.domain.model.Book;
-import jwlee.springboot_crud.domain.repository.BookRepository;
-import jwlee.springboot_crud.domain.repository.entity.BookEntity;
+import jwlee.springboot_crud.infrastructor.repository.BookRepository;
+import jwlee.springboot_crud.domain.entity.BookEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

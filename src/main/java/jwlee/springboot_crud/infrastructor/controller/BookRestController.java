@@ -1,8 +1,8 @@
 package jwlee.springboot_crud.infrastructor.controller;
 
 import jwlee.springboot_crud.domain.model.Book;
-import jwlee.springboot_crud.domain.service.BookService;
-import jwlee.springboot_crud.infrastructor.dto.BookReq;
+import jwlee.springboot_crud.application.service.BookService;
+import jwlee.springboot_crud.application.dto.BookReq;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

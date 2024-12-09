@@ -1,7 +1,7 @@
 package jwlee.springboot_crud.infrastructor.controller;
 
 import jwlee.springboot_crud.domain.model.Book;
-import jwlee.springboot_crud.domain.service.BookService;
+import jwlee.springboot_crud.application.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
